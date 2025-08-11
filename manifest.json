@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Pikachu Helper",
+  "version": "1.0",
+  "description": "Quét bàn Pikachu, trả về ma trận mã số (hidden -> -1).",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.pikachucodien.net/*"
+      ],
+      "js": [
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
