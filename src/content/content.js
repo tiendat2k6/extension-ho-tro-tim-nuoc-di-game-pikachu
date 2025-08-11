@@ -413,7 +413,6 @@
                             if (cellRows[i1] && cellRows[i1][j1] && cellRows[i2] && cellRows[i2][j2]) {
                                 const cell1 = cellRows[i1][j1].dom;
                                 const cell2 = cellRows[i2][j2].dom;
-                                console.log(cell1, cell2);
                                 cell1.style.boxShadow = "0 0 10px 5px yellow";
                                 cell2.style.boxShadow = "0 0 10px 5px yellow";
                                 setTimeout(() => {
